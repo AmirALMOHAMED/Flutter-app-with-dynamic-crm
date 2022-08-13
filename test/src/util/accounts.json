@@ -1,0 +1,49 @@
+{
+  "@odata.context": null,
+  "value": [
+    {
+      "@odata.etag": "W/\"3138181\"",
+      "name": "Cafe Duo",
+      "accountnumber": "3006",
+      "statecode": 0,
+      "address1_stateorprovince": "WA",
+      "entityimage_url": null,
+      "emailaddress1": "pete@contoso.com",
+      "accountid": "88019079-e334-46c0-b2da-27d8a73c51dc",
+      "address1_composite": "WA"
+    },
+    {
+      "@odata.etag": "W/\"3138183\"",
+      "name": "Fourth Coffee",
+      "accountnumber": "2020",
+      "statecode": 0,
+      "address1_stateorprovince": "WA",
+      "entityimage_url": null,
+      "emailaddress1": "claudia@pmgdemo.onmicrosoft.com",
+      "accountid": "dbdd0b93-4a1b-4848-b83a-39352f6b2e7a",
+      "address1_composite": "WA"
+    },
+    {
+      "@odata.etag": "W/\"3138186\"",
+      "name": "Contoso Coffee",
+      "accountnumber": "2017",
+      "statecode": 0,
+      "address1_stateorprovince": "WA",
+      "entityimage_url": null,
+      "emailaddress1": "claudiam365@pmgdemo.onmicrosoft.com",
+      "accountid": "0faa50fe-e7d0-4e9d-bdfd-3aacc2d9cbdd",
+      "address1_composite": "WA"
+    },
+    {
+      "@odata.etag": "W/\"3138187\"",
+      "name": "Bean-to-Cup Machines",
+      "accountnumber": "3011",
+      "statecode": 0,
+      "address1_stateorprovince": "WA",
+      "entityimage_url": null,
+      "emailaddress1": "parsifal@contoso.com",
+      "accountid": "bda958a1-7ff7-4f69-9812-83d77efe0cc8",
+      "address1_composite": "WA"
+    }
+  ]
+}

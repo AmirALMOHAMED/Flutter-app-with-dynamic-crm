@@ -1,0 +1,16 @@
+{
+  "@odata.context": null,
+  "value": [
+    {
+      "@odata.etag": "W/\"3138181\"",
+      "name": "Cafe Duo",
+      "accountnumber": "3006",
+      "statecode": 0,
+      "address1_stateorprovince": "WA",
+      "entityimage_url": null,
+      "emailaddress1": "pete@contoso.com",
+      "accountid": "88019079-e334-46c0-b2da-27d8a73c51dc",
+      "address1_composite": "WA"
+    }
+  ]
+}
