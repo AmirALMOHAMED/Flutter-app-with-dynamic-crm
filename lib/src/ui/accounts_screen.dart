@@ -175,7 +175,6 @@ class _AccountsScreenState extends State<AccountsScreen>{
   }
 
 
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -225,7 +224,8 @@ class _AccountsScreenState extends State<AccountsScreen>{
                   ),
                 ],
                 onChanged: (value) {
-                  MenuItems.onChanged(context, value as MenuItem);
+                  //MenuItems.onChanged(context, value as MenuItem);
+                  _openFilterDialog();
                 },
                 itemHeight: 48,
                 itemPadding: const EdgeInsets.only(left: 16, right: 16),
@@ -358,6 +358,57 @@ class _AccountsScreenState extends State<AccountsScreen>{
     );
   }
 
+  List<String> stateList = [
+    "Active",
+    "Inactive"
+  ];
+  List<String>? selectedStateList = [];
+
+  Future<void> _openFilterDialog() async {
+    await FilterListDialog.display<String>(
+      context,
+      hideSelectedTextCount: true,
+      themeData: FilterListThemeData(context),
+      headlineText: 'Select State',
+      height: 500,
+      listData: stateList,
+      selectedListData: selectedStateList,
+      choiceChipLabel: (item) => item,
+      validateSelectedItem: (list, val) => list!.contains(val),
+      controlButtons: [ControlButtonType.All, ControlButtonType.Reset],
+      onItemSearch: (item, query) {
+        /// When search query change in search bar then this method will be called
+        ///
+        /// Check if items contains query
+        return item.toLowerCase().contains(query.toLowerCase());
+      },
+
+      onApplyButtonClick: (list) {
+        setState(() {
+          selectedStateList = List.from(list!);
+        });
+        Navigator.pop(context);
+      },
+
+      /// uncomment below code to create custom choice chip
+      /* choiceChipBuilder: (context, item, isSelected) {
+        return Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+          decoration: BoxDecoration(
+              border: Border.all(
+            color: isSelected! ? Colors.blue[300]! : Colors.grey[300]!,
+          )),
+          child: Text(
+            item.name,
+            style: TextStyle(
+                color: isSelected ? Colors.blue[300] : Colors.grey[500]),
+          ),
+        );
+      }, */
+    );
+  }
+
 }
 
 class MenuItem {
@@ -423,6 +474,9 @@ class MenuItems {
   ];
 
   static List<String>? selectedItems = [];
+
+
+
 }
 
 class FilterPage extends StatelessWidget {
