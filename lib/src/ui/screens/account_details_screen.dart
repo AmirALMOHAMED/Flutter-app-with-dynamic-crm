@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../models/account_model.dart';
+import '../../models/account_model.dart';
 
 class AccountDetailsScreen extends StatelessWidget{
   const AccountDetailsScreen({Key? key, required this.account}) : super(key: key);

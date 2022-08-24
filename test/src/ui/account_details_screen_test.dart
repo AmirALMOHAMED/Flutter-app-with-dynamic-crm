@@ -1,5 +1,5 @@
 import 'package:dataverse_accounts_sample_app/src/models/account_model.dart';
-import 'package:dataverse_accounts_sample_app/src/ui/account_details_screen.dart';
+import 'package:dataverse_accounts_sample_app/src/ui/screens/account_details_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_test/flutter_test.dart';
 

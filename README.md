@@ -15,7 +15,7 @@ A few resources to get you started if this is your first Flutter project with th
  <li>   2-  auto-generate models.[freezed](https://pub.dev/packages/freezed)</li>
   <li>  3-  Bloc design pattern.[flutter_bloc](https://pub.dev/packages/flutter_bloc)</li>
   <li>  4-  HTTP client with powerful options.[dio](https://pub.dev/packages/dio)</li>
-  <li>  5-  dio HTTP client generator.[Retrofit ](https://pub.dev/packages/retrofit)</li>
+  <li>  5-  dio HTTP client generator.[Retrofit ](https://pub.dev/packages/retrofit)</li>   
    <li> 5-  OAuth2 Azure Active Directory.[aad_oauth](https://pub.dev/packages/aad_oauth)</li>
    <li> 6-  Dependency Injection design pattern useful for unit test.[injectable](https://pub.dev/packages/injectable)</li>
    <li> 7-  Service Locator useful for access objects form UI or provider easily.[get_it](https://pub.dev/packages/get_it)</li>
