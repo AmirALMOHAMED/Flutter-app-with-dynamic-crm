@@ -22,20 +22,39 @@ A few resources to get you started if this is your first Flutter project with th
    <li> 8-  Generated mock classes in UNIT TEST for Fakes, Mocks, behavior verification, and stubbing.[mockito](https://pub.dev/packages/mockito)</li>
 </ul>
 <p>
+
 ## For Azure Active Directory Oauth, you have to configure this:
+
  </p>
 <ul>
 <li>1-  create an azure app at the [Azure App registration portal](https://portal.azure.com/).  </li>
 <li>2-  Use native app as platform type (with callback URL: https://login.live.com/oauth20_desktop.srf).</li> 
 <li>3-  initialize the library as follow:</li>
- <li>   static final Config config = new Config(</li>
-  <li>      tenant: "YOUR_TENANT_ID",</li>
-   <li>     clientId: "YOUR_CLIENT_ID",</li>
-    <li>    scope: "openid profile offline_access",</li>
-     <li>   redirectUri: "your redirect url available in azure portal"</li>
-   <li> );</li>
-    <li>final AadOAuth oauth = new AadOAuth(config);</li>
+
+```dart
+static final Config config = Config(
+    //YOUR_TENANT_ID
+    tenant: 'YOUR_TENANT_ID',
+
+    //YOUR_CLIENT_ID
+    clientId: 'YOUR_CLIENT_ID',
+
+    //YOUR_DYNAMIC_CRM_API
+    scope: 'https://YOUR_DYNAMIC_CRM.api.crm4.dynamics.com/user_impersonation',
+
+    redirectUri: 'https://login.live.com/oauth20_desktop.srf',
+
+  );
+
+  final AadOAuth oauth = new AadOAuth(config);
+```
+
 <li>4-  call login() and afterwards getAccessToken() to retrieve an access token:</li>
- <li>   await oauth.login();</li>
-  <li>  String accessToken = await oauth.getAccessToken();</li>
 </ul>
+
+```dart
+await oauth.login();
+String accessToken = await oauth.getAccessToken();
+```
+
+

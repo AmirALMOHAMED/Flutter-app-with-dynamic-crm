@@ -18,12 +18,6 @@ class AadOauthClient{
 
     redirectUri: 'https://login.live.com/oauth20_desktop.srf',
 
-    //YOUR_CLIENT_SECRET
-    //clientSecret: '22m8Q~ASZh8pfshj913q9_F04AXr.z.sKsMb6bxB',
-
-    //navigatorKey: getIt<AadOauthClient>().navigatorKey,
-    //isB2C: true,
-
   );
 
   final AadOAuth oauth = AadOAuth(config);
